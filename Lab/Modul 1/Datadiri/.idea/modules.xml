@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Datadiri.iml" filepath="$PROJECT_DIR$/Datadiri.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataDiri.iml" filepath="$PROJECT_DIR$/DataDiri.iml" />
     </modules>
   </component>
 </project>

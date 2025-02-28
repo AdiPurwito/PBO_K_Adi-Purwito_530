@@ -30,7 +30,7 @@ public class DataDiri {
         System.out.println("Nama         : " + nama);
         System.out.println("Jenis Kelamin: " + jenisKelaminLengkap);
         System.out.println("Umur         : " + umur + " tahun");
-
+        
         scanner.close();
     }
 }
