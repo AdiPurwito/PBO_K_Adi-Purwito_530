@@ -9,12 +9,12 @@ public class RegistrasiPengguna {
         
         String mahasiswaUsername = "Adi Purwito";
         String mahasiswaPassword = "202410370110530";
-        
+
         while (true) {
             System.out.println("Pilihan:");
             System.out.println("1. Login Admin");
             System.out.println("2. Login Mahasiswa");
-            System.out.print("Masukkan pilihan (1/2): ");
+            System.out.print("Masukkan pilihan : ");
             
             String pilihan = scanner.nextLine().trim();
             
