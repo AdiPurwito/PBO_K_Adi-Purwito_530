@@ -4,29 +4,30 @@ public class Login {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int pilihan;
-        Admin admin = new Admin();
-        Mahasiswa mhs = new Mahasiswa();
+        System.out.println("::=====-- Pilih Login --=====::");
+        System.out.println("1. Admin");
+        System.out.println("2. Mahasiswa");
+        System.out.print("Masukkan Pilihan (1/2): ");
+        int pilihan = input.nextInt();
 
-        while (true) {
-            System.out.println("::=====-- Pilih Login --=====::");
-            System.out.println("1. Admin");
-            System.out.println("2. Mahasiswa");
-            System.out.print("Masukkan Pilihan (1/2): ");
-            pilihan = input.nextInt();
-            input.nextLine();
+        User user;
 
-            if (pilihan == 1) {
-                admin.login();
-                break;
-            } else if (pilihan == 2) {
-                mhs.login();
-                break;
-            } else {
-                System.out.println("Pilihan tidak valid.");
-            }
+        if (pilihan == 1) {
+            user = new Admin();
+        } else if (pilihan == 2) {
+            user = new Mahasiswa();
+        } else {
+            System.out.println("Pilihan tidak valid.");
+            return;
         }
 
-        input.close();
+        boolean loginSuccess = user.login();
+
+        if (loginSuccess) {
+            System.out.println("Login berhasil!");
+            user.displayInfo();
+        } else {
+            System.out.println("Login gagal! Silakan coba lagi.");
+        }
     }
 }
